@@ -1,39 +1,43 @@
 export const projectsData = [
     {
         id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
+        name: <a href=" https://github.com/JKalonewolf/FinGPT.git" target="_blank">
+             FinGPT AI Chatbot for India
+             </a>,
+        description: "Built a domain-specific chatbot using LLMs to interpret Indian banking and FinTechregulations.Integrated LangChain and RAG for accurate retrieval and context-aware responses.Fine-tuned models using LoRA and deployed the chatbot with Streamlit and MongoDBbackend.Enabled secure, real-time interaction and simplified regulatory compliance for endusers.",
+        tools: ['python', 'PyTorch', 'LLM', 'LangChain', 'RAG', 'LoRA', 'Streamlit',],
+        role: 'full Stack Developer',
         code: '',
         demo: '',
     },
     {
         id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
+        name: <a href="https://github.com/JKalonewolf/KYC-System-in-blockchain.git" target="_blank">Blockchain-KYC-System</a>,
+        description: 'Designed and developed a decentralized KYC system using Ethereum smart contracts (Solidity) for secure customer data verification and consent management.Integrated React frontend and Node.js backend with blockchain (Web3.js) to enable customer onboarding, KYC submission, and banker approval workflows.Implemented on-chain data hashing with off-chain storage (selfie/document uploads)to ensure data integrity, transparency, and auditability..',
+        tools: ['smart contracts(solidity)', 'react', "node.js", "web3", "mongodb",],
+        role: 'full Stack Developer',
         code: '',
         demo: '',
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
+        name: <a href="https://github.com/JKalonewolf/Cars-dealershipsfullstack_developer_capstone.git" target="_blank">Cars Dealership Application</a>,
+        description: 'Developed a web application to enhance the user experience in browsing and purchasingehicles.Technologies Used: React, Node.js, SQL, Javascript, Django and Docker, Kubernetes Impact: Streamlined the buying process, reducing user registration time by 40%, and attracting over 100 users within the first month of launch..',
+        tools: ['React', 'node.js', 'Express', 'javaScript', 'Django', 'docker,kubernetes',],
         code: '',
-        role: 'Full Stack Developer',
+        role: 'full Stack Developer',
         demo: '',
     },
     {
         id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
+        name: <a href=" https://github.com/JKalonewolf/FinGPT.git" target="_blank">
+             Shopping App
+             </a>,
+        description: "Designed a responsive shopping application to improve e-commerce engagement. Technologies Used: HTML, CSS, JavaScript, Python, MongoDBImpact: achieved a 25% increase in user interaction and purchase rates, leading to positive feedback from initial testers..",
+        tools: ['html', 'css', 'mongodb', 'javascript', "python"],
         code: '',
         demo: '',
-        role: 'Full Stack Developer',
+        role: '',
     }
 ];
 

@@ -1,20 +1,23 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "BCA",
+    duration: "2020 - 2023",
+    institution: "Excel college for Commerce and Science",
+    CGPA:"7.3",
   },
   {
     id: 2,
     title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    duration: "2020",
+    institution: " Sri Sharada Vidya Mandir school",
+    CGPA:"67%",
   },
   {
     id: 3,
     title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    duration: " 2018",
+    institution: " New Generation Matric High school",
+    CGPA:"69%",
   }
 ]
