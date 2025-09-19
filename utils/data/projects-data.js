@@ -21,7 +21,7 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: <a href="https://github.com/JKalonewolf/automatrix-fullstack.git" target="_blank">Automatrix</a>,
+        name: <a href="https://automatrix-eta.vercel.app/" target="_blank">Automatrix</a>,
         description: 'Developed a web application to enhance the user experience in browsing and purchasingehicles.Technologies Used: React, Node.js, SQL, Javascript, Django and Docker, Kubernetes Impact: Streamlined the buying process, reducing user registration time by 40%, and attracting over 100 users within the first month of launch..',
         tools: ['Next.js', 'node.js', 'javaScript','Mongodb',],
         code: '',
