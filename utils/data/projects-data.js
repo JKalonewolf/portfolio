@@ -21,12 +21,12 @@ export const projectsData = [
     },
     {
         id: 3,
-        name: <a href="https://github.com/JKalonewolf/Cars-dealershipsfullstack_developer_capstone.git" target="_blank">Cars Dealership Application</a>,
+        name: <a href="https://github.com/JKalonewolf/automatrix-fullstack.git" target="_blank">Automatrix</a>,
         description: 'Developed a web application to enhance the user experience in browsing and purchasingehicles.Technologies Used: React, Node.js, SQL, Javascript, Django and Docker, Kubernetes Impact: Streamlined the buying process, reducing user registration time by 40%, and attracting over 100 users within the first month of launch..',
-        tools: ['React', 'node.js', 'Express', 'javaScript', 'Django', 'docker,kubernetes',],
+        tools: ['Next.js', 'node.js', 'javaScript','Mongodb',],
         code: '',
         role: 'full Stack Developer',
-        demo: '',
+        demo: 'https://automatrix-eta.vercel.app/',
     },
     {
         id: 4,
