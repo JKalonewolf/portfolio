@@ -1,8 +1,9 @@
 export const personalData = {
   name: "Jayakumar",
   profile: '/profile.png',
-  designation: "Software Developer",
-  description: "My name is Jayakumar, and I am a passionate and dedicated programmer with a strong enthusiasm for web application development. I am a quick learner with a self-driven attitude and enjoy exploring new technologies while solving complex problems. With a broad interest across multiple development stacks, I aim to contribute to building innovative and open solutions for the web. I am open to job opportunities that align with my skills, interests, and career growth.",
+  designation: "IT & FinTech Enthusiast | Full Stack Developer | AI Engineer | Blockchain Developer",
+  description:" I am Jayakumar, an MBA (IT & FinTech) final-year student with a BCA background, focused on technology-enabled financial solutions and digital transformation. With knowledge of FinTech platforms, AI, blockchain, and full stack systems, I aim to bridge the gap between business requirements and technical implementation in modern financial services.,With hands-on experience in Full Stack Development, AI Engineering, and Blockchain, I aim to contribute to building secure, scalable, and innovative digital solutions. I am open to opportunities that align with my technical skills, interest in FinTech, and long-term professional growth.",
+  
   email: 'jayakumarkumar7783@gmail.com',
   phone: '6383552637',
   address: '2/109, Linganampatti,Koppakari (PT), Denkanikottai (DK), Krishnagiri (DT), Tamil Nadu, 635116.',

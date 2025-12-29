@@ -30,14 +30,14 @@ export const projectsData = [
     },
     {
         id: 4,
-        name: <a href=" https://github.com/JKalonewolf/FinGPT.git" target="_blank">
-             Shopping App
+        name: <a href="https://github.com/JKalonewolf/GigWorker.git" target="_blank">
+             Gigworker
              </a>,
-        description: "Designed a responsive shopping application to improve e-commerce engagement. Technologies Used: HTML, CSS, JavaScript, Python, MongoDBImpact: achieved a 25% increase in user interaction and purchase rates, leading to positive feedback from initial testers..",
-        tools: ['html', 'css', 'mongodb', 'javascript', "python"],
+        description: "Designed and developed a comprehensive fintech ecosystem tailored for gig economy workers to streamline identity verification and financial access. The platform bridges the gap between informal workers and formal financial services through a secure mobile application and a robust administrative portal. It features an automated KYC (Know Your Customer) workflow, a digital wallet for income tracking, and role-based access control to ensure data security and operational efficiency...",
+        tools: ['flutter', 'firebase', 'dart',],
         code: '',
         demo: '',
-        role: '',
+        role: 'Full Stack Developer (Flutter & Firebase)',
     }
 ];
 

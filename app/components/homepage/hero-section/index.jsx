@@ -98,20 +98,22 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Docker, Kubernetes</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Smart Contract Development</span>
+                <span className="text-amber-300">Blockchain</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Express</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">PyTorch,PyTorch,TensorFlow</span>
+                <span className="text-amber-300">PyTorch,TensorFlow</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">SQL</span>
+                <span className="text-amber-300">MYSQL,SQL</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Prompt Engineering</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
+                <span className="text-amber-300">jira</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">AWS, ML and DL</span>
-                <span className="text-gray-400">{"'],"}</span>
+                <span className="text-gray-400">{"',"}</span>
+                <span className="text-amber-300">Figma</span>
+                <span className="text-gray-400">{"',"}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
