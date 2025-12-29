@@ -12,7 +12,7 @@ export const projectsData = [
     },
     {
         id: 2,
-        name: <a href="https://github.com/JKalonewolf/KYC-System-in-blockchain.git" target="_blank">Blockchain-KYC-System</a>,
+        name: <a href="https://github.com/JKalonewolf/KYC-System-in-blockchain.git" target="_blank">Decentralized KYC Identity Platform (Blockchain)</a>,
         description: 'Designed and developed a decentralized KYC system using Ethereum smart contracts (Solidity) for secure customer data verification and consent management.Integrated React frontend and Node.js backend with blockchain (Web3.js) to enable customer onboarding, KYC submission, and banker approval workflows.Implemented on-chain data hashing with off-chain storage (selfie/document uploads)to ensure data integrity, transparency, and auditability..',
         tools: ['smart contracts(solidity)', 'react', "node.js", "web3", "mongodb",],
         role: 'full Stack Developer',
@@ -31,7 +31,7 @@ export const projectsData = [
     {
         id: 4,
         name: <a href="https://github.com/JKalonewolf/GigWorker.git" target="_blank">
-             Gigworker
+             GigWorker – Micro-Lending Platform (Fintech)
              </a>,
         description: "Designed and developed a comprehensive fintech ecosystem tailored for gig economy workers to streamline identity verification and financial access. The platform bridges the gap between informal workers and formal financial services through a secure mobile application and a robust administrative portal. It features an automated KYC (Know Your Customer) workflow, a digital wallet for income tracking, and role-based access control to ensure data security and operational efficiency...",
         tools: ['flutter', 'firebase', 'dart',],

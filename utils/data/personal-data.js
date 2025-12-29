@@ -14,5 +14,5 @@ facebook: '/',
   stackOverflow: '',
   leetcode: "",
   devUsername: "jayakumar",
-  resume: "https://drive.google.com/file/d/1QJxe-3y9YRCA7yMVp5VS8buKX247v6VY/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1qgSYzD_VkOMNm_wWWOVNzVl38Fgh0dof/view?usp=sharing"
 }
