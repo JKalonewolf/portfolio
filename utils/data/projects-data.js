@@ -2,7 +2,7 @@ export const projectsData = [
     {
         id: 1,
         name: <a href=" https://github.com/JKalonewolf/FinGPT.git" target="_blank">
-             FinGPT AI Chatbot for India
+             FinGPT – AI Regulatory Compliance Assistant
              </a>,
         description: "Built a domain-specific chatbot using LLMs to interpret Indian banking and FinTechregulations.Integrated LangChain and RAG for accurate retrieval and context-aware responses.Fine-tuned models using LoRA and deployed the chatbot with Streamlit and MongoDBbackend.Enabled secure, real-time interaction and simplified regulatory compliance for endusers.",
         tools: ['python', 'PyTorch', 'LLM', 'LangChain', 'RAG', 'LoRA', 'Streamlit',],

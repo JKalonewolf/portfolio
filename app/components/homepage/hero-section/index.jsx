@@ -96,13 +96,13 @@ function HeroSection() {
                 <span className="text-gray-400">{`['`}</span>
                 <span className="text-amber-300">React,web3</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker, Kubernetes</span>
+                <span className="text-amber-300">User Research</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Blockchain</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
+                <span className="text-amber-300">Agile & Scrum</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">PyTorch,TensorFlow</span>
+                <span className="text-amber-300">PyTorch</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">MYSQL,SQL</span>
                 <span className="text-gray-400">{"', '"}</span>
@@ -110,9 +110,13 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">jira</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS, ML and DL</span>
+                <span className="text-amber-300">AI / LLMs</span>
                 <span className="text-gray-400">{"',"}</span>
                 <span className="text-amber-300">Figma</span>
+                <span className="text-gray-400">{"',"}</span>
+                <span className="text-amber-300">Requirement Gathering</span>
+                <span className="text-gray-400">{"',"}</span>
+                <span className="text-amber-300">Stakeholder Management</span>
                 <span className="text-gray-400">{"',"}</span>
               </div>
               <div>

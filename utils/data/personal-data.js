@@ -1,7 +1,7 @@
 export const personalData = {
   name: "Jayakumar",
   profile: '/profile.png',
-  designation: "IT & FinTech Enthusiast | Full Stack Developer | AI Engineer | Blockchain Developer",
+  designation: "Product Analyst | Associate Product Manager | FinTech, AI & Blockchain | MBA (IT & FinTech) |Full-Stack Developer",
   description:" I am Jayakumar, an MBA (IT & FinTech) final-year student with a BCA background, focused on technology-enabled financial solutions and digital transformation. With knowledge of FinTech platforms, AI, blockchain, and full stack systems, I aim to bridge the gap between business requirements and technical implementation in modern financial services.,With hands-on experience in Full Stack Development, AI Engineering, and Blockchain, I aim to contribute to building secure, scalable, and innovative digital solutions. I am open to opportunities that align with my technical skills, interest in FinTech, and long-term professional growth.",
   
   email: 'jayakumarkumar7783@gmail.com',
@@ -14,5 +14,5 @@ facebook: '/',
   stackOverflow: '',
   leetcode: "",
   devUsername: "jayakumar",
-  resume: "https://drive.google.com/file/d/1qgSYzD_VkOMNm_wWWOVNzVl38Fgh0dof/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1stZ9iYmbxHeut1G96AZcioquhmGLM0Ip/view?usp=sharing"
 }
