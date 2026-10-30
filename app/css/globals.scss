@@ -12,7 +12,16 @@
   }
 }
 
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
 }
@@ -34,6 +43,5 @@ body {
 }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
 }

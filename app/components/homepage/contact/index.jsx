@@ -9,18 +9,14 @@ function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative my-16 mt-20 scroll-mt-24 border-t border-[#25213b] py-12 text-white lg:my-24 lg:py-16"
+      className="relative scroll-mt-20 border-t border-[#25213b] py-10 sm:py-12 lg:py-14 text-white"
     >
-      <div className="mx-auto mb-10 max-w-3xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          Contact
-        </p>
-        <h2 className="text-2xl font-bold text-white md:text-4xl">
-          Let&apos;s connect and <span className="text-[#16f2b3]">build meaningful work.</span>
+      <div className="mx-auto mb-8 sm:mb-10 max-w-3xl text-center">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Get in <span className="text-[#16f2b3]">Touch</span>
         </h2>
-        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
-          I&apos;m open to suitable opportunities in business analysis, product analytics,
-          FinTech and AI. Reach out to discuss a role, project or collaboration.
+        <p className="mt-2 text-sm leading-7 text-gray-400 md:text-base">
+          Let&apos;s connect and discuss roles, projects or collaboration opportunities.
         </p>
       </div>
 

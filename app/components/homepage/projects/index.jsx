@@ -3,17 +3,13 @@ import ProjectCard from "./project-card";
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative z-10 my-16 scroll-mt-24 lg:my-24">
-      <div className="mx-auto mb-10 max-w-3xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          Selected Work
-        </p>
-        <h2 className="text-2xl font-bold text-white md:text-4xl">
-          Projects that connect <span className="text-[#16f2b3]">business and technology.</span>
+    <section id="projects" className="relative z-10 scroll-mt-20 border-t border-[#25213b] py-10 sm:py-12 lg:py-14">
+      <div className="mx-auto mb-8 sm:mb-10 max-w-3xl text-center">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Selected <span className="text-[#16f2b3]">Work &amp; Projects</span>
         </h2>
-        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
+        <p className="mt-2 text-sm leading-7 text-gray-400 md:text-base">
           A selection of business analysis, product, data, FinTech and AI projects.
-          Each project highlights the problem, my contribution and the tools used.
         </p>
       </div>
 

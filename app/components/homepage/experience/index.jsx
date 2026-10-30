@@ -5,17 +5,14 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="relative my-16 scroll-mt-24 border-t border-[#25213b] py-12 lg:my-24 lg:py-16"
+      className="relative scroll-mt-20 border-t border-[#25213b] py-10 sm:py-12 lg:py-14"
     >
-      <div className="mx-auto mb-10 max-w-3xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          Professional Experience
-        </p>
-        <h2 className="text-2xl font-bold text-white md:text-4xl">
-          Where I&apos;ve <span className="text-[#16f2b3]">worked and contributed.</span>
+      <div className="mx-auto mb-8 sm:mb-10 max-w-3xl text-center">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Professional <span className="text-[#16f2b3]">Experience</span>
         </h2>
-        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
-          My professional internship experience, separate from academic and portfolio projects.
+        <p className="mt-2 text-sm leading-7 text-gray-400 md:text-base">
+          Where I&apos;ve worked and contributed across internship and product roles.
         </p>
       </div>
 

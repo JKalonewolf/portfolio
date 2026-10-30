@@ -22,15 +22,14 @@ const focusAreas = [
 
 function AboutSection() {
   return (
-    <section id="about" className="relative my-16 scroll-mt-24 lg:my-24">
-      <div className="mb-10 max-w-3xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          About Me
-        </p>
-        <h2 className="text-2xl font-bold leading-tight text-white md:text-4xl">
-          Connecting business needs with{" "}
-          <span className="text-[#16f2b3]">technology and data.</span>
+    <section id="about" className="relative pt-6 pb-10 sm:pt-8 sm:pb-12 lg:pt-10 lg:pb-14 scroll-mt-20">
+      <div className="mb-8 sm:mb-10 max-w-3xl">
+        <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
+          About <span className="text-[#16f2b3]">Me</span>
         </h2>
+        <p className="mt-2 text-sm leading-relaxed text-gray-400 md:text-base">
+          Connecting business needs with technology and data.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-14">
@@ -62,13 +61,14 @@ function AboutSection() {
         </div>
 
         <aside className="mx-auto w-full max-w-sm rounded-2xl border border-[#1b2c68a0] bg-gradient-to-br from-[#111a36] to-[#0a0d27] p-5 shadow-xl shadow-violet-950/20">
-          <div className="flex justify-center">
+          <div className="group relative mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-[#16f2b3]/30 shadow-lg shadow-black/40">
             <Image
               src={personalData.profile}
-              width={240}
-              height={240}
+              width={400}
+              height={533}
+              priority
               alt="Portrait of Jayakumar L"
-              className="h-52 w-52 rounded-xl object-cover grayscale transition-all duration-700 hover:grayscale-0 md:h-60 md:w-60"
+              className="h-auto w-full aspect-[3/4] object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </div>
 

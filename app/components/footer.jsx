@@ -5,18 +5,15 @@ import { FiArrowUp, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 function Footer() {
   return (
     <footer className="relative mt-16 border-t border-[#353951] bg-[#0d1224] text-white">
-      <div className="mx-auto px-6 py-8 sm:px-12 lg:max-w-[70rem] lg:py-10 xl:max-w-[76rem] 2xl:max-w-[92rem]">
+      <div className="mx-auto px-4 py-8 sm:px-8 md:px-10 lg:max-w-[70rem] lg:px-12 lg:py-10 xl:max-w-[76rem] 2xl:max-w-[92rem]">
         <div className="mb-6 flex justify-center">
           <div className="h-px w-1/2 bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
         </div>
 
         <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
           <div className="text-center md:text-left">
-            <p className="text-sm font-semibold text-white">
-              Jayakumar L <span className="text-[#16f2b3]">·</span> Business Analyst | Product Analyst
-            </p>
-            <p className="mt-2 text-xs text-gray-500">
-              © {new Date().getFullYear()} Jayakumar L. All rights reserved.
+            <p className="text-xs text-gray-400">
+              © {new Date().getFullYear()} All rights reserved by Jayakumar.
             </p>
           </div>
 

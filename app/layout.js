@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer";
+import Background3D from "./components/helper/background-3d";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
@@ -46,10 +47,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} relative min-h-screen bg-[#0d1224] text-white overflow-x-hidden`}>
+        <Background3D />
         <ToastContainer />
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-          <Navbar />
+        <Navbar />
+        <main className="relative z-10 mx-auto min-h-screen w-full overflow-x-hidden pt-20 sm:pt-24 lg:pt-28 px-4 sm:px-8 md:px-10 lg:max-w-[70rem] lg:px-12 xl:max-w-[76rem] 2xl:max-w-[92rem]">
           {children}
           <ScrollToTop />
         </main>

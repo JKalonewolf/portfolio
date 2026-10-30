@@ -5,17 +5,14 @@ function Education() {
   return (
     <section
       id="education"
-      className="relative my-16 scroll-mt-24 border-t border-[#25213b] py-12 lg:my-24 lg:py-16"
+      className="relative scroll-mt-20 border-t border-[#25213b] py-10 sm:py-12 lg:py-14"
     >
-      <div className="mx-auto mb-10 max-w-3xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          Education
-        </p>
-        <h2 className="text-2xl font-bold text-white md:text-4xl">
-          Academic <span className="text-[#16f2b3]">background.</span>
+      <div className="mx-auto mb-8 sm:mb-10 max-w-3xl text-center">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Academic <span className="text-[#16f2b3]">Education</span>
         </h2>
-        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
-          My education combines business and financial technology with a foundation in computer applications.
+        <p className="mt-2 text-sm leading-7 text-gray-400 md:text-base">
+          Business, FinTech and computer applications educational background.
         </p>
       </div>
 

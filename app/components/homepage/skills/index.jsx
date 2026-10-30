@@ -68,19 +68,15 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section id="skills" className="relative my-16 scroll-mt-24 border-t border-[#25213b] py-12 lg:my-24 lg:py-16">
+    <section id="skills" className="relative scroll-mt-20 border-t border-[#25213b] py-10 sm:py-12 lg:py-14">
       <div className="pointer-events-none absolute left-1/2 top-20 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
 
-      <div className="mx-auto mb-10 max-w-3xl text-center">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
-          Skills &amp; Capabilities
-        </p>
-        <h2 className="text-2xl font-bold text-white md:text-4xl">
-          A mix of <span className="text-[#16f2b3]">business, data and technology.</span>
+      <div className="mx-auto mb-8 sm:mb-10 max-w-3xl text-center">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+          Skills &amp; <span className="text-[#16f2b3]">Capabilities</span>
         </h2>
-        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
-          Skills developed through my MBA, project work and technical experience.
-          I use them to understand problems, define requirements and support data-informed solutions.
+        <p className="mt-2 text-sm leading-7 text-gray-400 md:text-base">
+          A mix of business analysis, product analytics, and technical capabilities.
         </p>
       </div>
 
