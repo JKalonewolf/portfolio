@@ -7,14 +7,14 @@ import ScrollToTop from "./components/helper/scroll-to-top";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jayakumar-Developer Portfolio",
+  title: "Jayakumar L | Business Analyst, Product Analyst & FinTech Portfolio",
   description:
-    "This is the portfolio of Jayakumar. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
-
-  };
+    "Portfolio of Jayakumar L, MBA graduate in IT & FinTech, showcasing business analysis, product analytics, FinTech, AI and data analytics projects.",
+};
 
 export default function RootLayout({ children }) {
   return (
