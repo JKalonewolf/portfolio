@@ -36,13 +36,12 @@ async function sendEmail({ name, email, message }) {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
       host: "smtp.gmail.com",
       port: 587,
       secure: false,
       auth: {
         user: EMAIL_ADDRESS,
-        pass: GMAIL_PASSKEY,
+        pass: GMAIL_PASSKEY.replace(/\s+/g, ''),
       },
     });
 
