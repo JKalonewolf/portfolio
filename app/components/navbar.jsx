@@ -20,15 +20,7 @@ function Navbar() {
 
   return (
     <nav className="sticky top-0 z-[100] border-b border-white/5 bg-[#0d1224]/90 backdrop-blur-xl">
-      <div className="relative mx-auto flex max-w-screen-xl items-center justify-between py-4">
-        <Link
-          href="/"
-          onClick={() => setIsOpen(false)}
-          className="text-xl font-extrabold tracking-wide text-[#16f2b3] transition-colors hover:text-white md:text-2xl"
-        >
-          JAYAKUMAR<span className="text-pink-500">.</span>
-        </Link>
-
+      <div className="relative mx-auto flex max-w-screen-xl items-center justify-end py-4">
         <button
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-gray-200 transition-colors hover:border-[#16f2b3]/40 hover:text-[#16f2b3] md:hidden"
