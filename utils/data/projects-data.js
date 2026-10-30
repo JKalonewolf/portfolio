@@ -1,56 +1,130 @@
 export const projectsData = [
-    {
-        id: 1,
-        name: <a href=" https://github.com/JKalonewolf/FinGPT.git" target="_blank">
-             FinGPT – AI Regulatory Compliance Assistant
-             </a>,
-        description: "Built a domain-specific chatbot using LLMs to interpret Indian banking and FinTechregulations.Integrated LangChain and RAG for accurate retrieval and context-aware responses.Fine-tuned models using LoRA and deployed the chatbot with Streamlit and MongoDBbackend.Enabled secure, real-time interaction and simplified regulatory compliance for endusers.",
-        tools: ['python', 'PyTorch', 'LLM', 'LangChain', 'RAG', 'LoRA', 'Streamlit',],
-        role: 'full Stack Developer',
-        code: '',
-        demo: '',
-    },
-    {
-        id: 2,
-        name: <a href="https://github.com/JKalonewolf/KYC-System-in-blockchain.git" target="_blank">Decentralized KYC Identity Platform (Blockchain)</a>,
-        description: 'Designed and developed a decentralized KYC system using Ethereum smart contracts (Solidity) for secure customer data verification and consent management.Integrated React frontend and Node.js backend with blockchain (Web3.js) to enable customer onboarding, KYC submission, and banker approval workflows.Implemented on-chain data hashing with off-chain storage (selfie/document uploads)to ensure data integrity, transparency, and auditability..',
-        tools: ['smart contracts(solidity)', 'react', "node.js", "web3", "mongodb",],
-        role: 'full Stack Developer',
-        code: '',
-        demo: '',
-    },
-    {
-        id: 3,
-        name: <a href="https://automatrix-eta.vercel.app/" target="_blank">Automatrix</a>,
-        description: 'Developed a web application to enhance the user experience in browsing and purchasingehicles.Technologies Used: React, Node.js, Javascript, Impact: Streamlined the buying process, reducing user registration time by 40%, and attracting over 100 users within the first month of launch..',
-        tools: ['Next.js', 'node.js', 'javaScript','Mongodb',],
-        code: '',
-        role: 'full Stack Developer',
-        demo: 'https://automatrix-eta.vercel.app/',
-    },
-    {
-        id: 4,
-        name: <a href="https://github.com/JKalonewolf/GigWorker.git" target="_blank">
-             GigWorker – Micro-Lending Platform (Fintech)
-             </a>,
-        description: "Designed and developed a comprehensive fintech ecosystem tailored for gig economy workers to streamline identity verification and financial access. The platform bridges the gap between informal workers and formal financial services through a secure mobile application and a robust administrative portal. It features an automated KYC (Know Your Customer) workflow, a digital wallet for income tracking, and role-based access control to ensure data security and operational efficiency...",
-        tools: ['flutter', 'firebase', 'dart',],
-        code: '',
-        demo: '',
-        role: 'Full Stack Developer (Flutter & Firebase)',
-    }
+  {
+    id: 1,
+    name: "FinGuard AI – Multi-Agent Regulatory Compliance Platform",
+    category: "AI & FinTech",
+    status: "Implemented project",
+    role: "AI project development, compliance workflow design and security validation",
+    featured: true,
+    description:
+      "Built a multi-agent compliance platform designed to monitor RBI and SEBI regulations, analyse business impact, create compliance tasks and verify completion through an agentic workflow.",
+    contributions: [
+      "Designed a multi-agent workflow for regulatory research, impact analysis, planning, evidence and verification.",
+      "Implemented RAG-supported regulatory intelligence and structured compliance workflows.",
+      "Added security controls including role-based access, prompt-injection defences and audit logging.",
+      "Validated the project with 290 automated tests, as recorded in the project test results.",
+    ],
+    tools: ["Python", "LangGraph", "FastAPI", "PostgreSQL", "RAG", "React", "OWASP LLM Security"],
+    code: "https://github.com/JKalonewolf/Fin-Guard-AI",
+    demo: "",
+  },
+  {
+    id: 2,
+    name: "CrediFlow – Lending Business Analysis Case Study",
+    category: "Business Analysis",
+    status: "End-to-end BA portfolio case study",
+    role: "Business Analysis",
+    featured: true,
+    description:
+      "An end-to-end business analysis case study for a digital lending workflow, documenting business needs, stakeholder expectations, requirements, processes and lending data analysis.",
+    contributions: [
+      "Prepared the business case, stakeholder analysis and scope documentation.",
+      "Created BRD, FRD, user stories and a Requirements Traceability Matrix.",
+      "Mapped AS-IS and TO-BE processes and organised supporting BPMN artefacts.",
+      "Prepared lending datasets and SQL scripts for data cleaning, KPI, customer and risk analysis.",
+    ],
+    tools: ["Business Case", "BRD / FRD", "RTM", "BPMN", "User Stories", "SQL", "Power BI"],
+    code: "",
+    demo: "",
+  },
+  {
+    id: 3,
+    name: "InsightX – AI-Powered Product Analytics Platform",
+    category: "Product Analytics",
+    status: "Product platform project",
+    role: "Product design and full-stack project development",
+    featured: false,
+    description:
+      "Designed an analytics platform to help product teams monitor user behaviour, understand product performance and make data-informed decisions.",
+    contributions: [
+      "Designed dashboards for KPIs, funnels, cohorts, user journeys and segmentation.",
+      "Defined event-tracking, A/B testing and feature-flag capabilities.",
+      "Worked on AI-powered insights, executive reporting and role-based access.",
+    ],
+    tools: ["React", "Node.js", "Python", "FastAPI", "PostgreSQL", "MongoDB", "AWS", "Docker"],
+    code: "https://github.com/JKalonewolf/InsightX-AI-Product-Analytics",
+    demo: "",
+  },
+  {
+    id: 4,
+    name: "FinGPT – AI Regulatory Compliance Assistant",
+    category: "AI & LegalTech",
+    status: "Implemented project",
+    role: "AI application development",
+    featured: false,
+    description:
+      "Built a domain-focused RAG chatbot to help users retrieve and understand information from Indian banking regulations through natural-language questions.",
+    contributions: [
+      "Structured regulatory content for retrieval-augmented question answering.",
+      "Integrated a conversational interface for context-aware responses.",
+      "Worked with the LangChain and Hugging Face ecosystem.",
+    ],
+    tools: ["Python", "LangChain", "Hugging Face", "RAG", "Streamlit", "MongoDB"],
+    code: "https://github.com/JKalonewolf/FinGPT",
+    demo: "",
+  },
+  {
+    id: 5,
+    name: "GigWorker – Micro-Lending Platform",
+    category: "FinTech Product",
+    status: "Product concept and prototype",
+    role: "Product planning and prototype development",
+    featured: false,
+    description:
+      "Conceptualised a digital wallet and micro-lending experience for gig workers who may face barriers to traditional credit because of irregular income.",
+    contributions: [
+      "Created a PRD containing 19 functional requirements and a six-phase roadmap.",
+      "Mapped loan application, wallet and repayment user journeys.",
+      "Identified potential funnel drop-offs and defined KYC and repayment targets.",
+    ],
+    tools: ["Product Requirements", "User Journeys", "Flutter", "Dart", "Firebase"],
+    code: "https://github.com/JKalonewolf/GigWorker",
+    demo: "",
+  },
+  {
+    id: 6,
+    name: "Decentralized KYC Identity Platform",
+    category: "Blockchain & FinTech",
+    status: "Blockchain project",
+    role: "Product workflow design and full-stack development",
+    featured: false,
+    description:
+      "Designed a blockchain-based identity verification workflow using Ethereum smart contracts to support KYC data integrity and a banker approval process.",
+    contributions: [
+      "Worked on identity submission, verification and banker approval flows.",
+      "Used smart contracts and on-chain hashing to support record integrity.",
+      "Connected a React interface with a Node.js and Web3.js application layer.",
+    ],
+    tools: ["Solidity", "Ethereum", "React", "Node.js", "Web3.js", "MongoDB"],
+    code: "https://github.com/JKalonewolf/KYC-System-in-blockchain",
+    demo: "",
+  },
+  {
+    id: 7,
+    name: "Pizza Sales Performance Dashboard",
+    category: "Data Analytics",
+    status: "Power BI dashboard",
+    role: "Data analysis and dashboard development",
+    featured: false,
+    description:
+      "Created a two-page Power BI dashboard to review sales performance, order trends, product categories and best- and worst-selling items.",
+    contributions: [
+      "Created DAX measures for revenue, orders and average order value.",
+      "Analysed sales trends across pizza categories and sizes.",
+      "Presented product performance insights to support menu and inventory decisions.",
+    ],
+    tools: ["Power BI", "DAX", "Excel", "Data Analytics"],
+    code: "https://github.com/JKalonewolf/Pizza-sales-report-dashbpard",
+    demo: "",
+  },
 ];
-
-
-// Do not remove any property.
-// Leave it blank instead as shown below
-
-// {
-//     id: 1,
-//     name: '',
-//     description: "",
-//     tools: [],
-//     role: '',
-//     code: '',
-//     demo: '',
-// },

@@ -1,71 +1,124 @@
-// @flow strict
-
-import { skillsData } from "@/utils/data/skills";
-import { skillsImage } from "@/utils/skill-image";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
+const skillGroups = [
+  {
+    title: "Business & Product Analysis",
+    subtitle: "Turning business needs into structured product decisions",
+    skills: [
+      "Requirement Gathering",
+      "PRD / BRD",
+      "User Stories",
+      "Agile / Scrum",
+      "Product Lifecycle",
+      "Stakeholder Management",
+      "User Research",
+      "Process & User Journey Mapping",
+      "Roadmap Planning",
+      "Competitive Analysis",
+    ],
+  },
+  {
+    title: "Data & Product Analytics",
+    subtitle: "Measuring performance and finding actionable insights",
+    skills: [
+      "SQL",
+      "Python",
+      "Microsoft Excel",
+      "Power BI",
+      "DAX",
+      "KPI Tracking",
+      "Funnel Analysis",
+      "Cohort Analysis",
+      "Dashboard Development",
+      "A/B Testing",
+      "Data-Driven Decision Making",
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    subtitle: "Tools used across analysis, design and collaboration",
+    skills: [
+      "Jira",
+      "Figma",
+      "Notion",
+      "Google Analytics",
+      "Mixpanel",
+      "Tableau",
+    ],
+  },
+  {
+    title: "Technology, FinTech & AI",
+    subtitle: "Technical foundations from hands-on project work",
+    skills: [
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Microsoft Azure",
+      "REST APIs",
+      "React",
+      "Node.js",
+      "FastAPI",
+      "Docker",
+      "Kubernetes",
+      "RAG",
+      "LangChain",
+      "LangGraph",
+      "Blockchain / Solidity",
+    ],
+  },
+];
 
 function Skills() {
   return (
-    <div id="skills" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+    <section id="skills" className="relative my-16 scroll-mt-24 border-t border-[#25213b] py-12 lg:my-24 lg:py-16">
+      <div className="pointer-events-none absolute left-1/2 top-20 -z-10 h-40 w-40 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl" />
 
-      <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
-        </div>
+      <div className="mx-auto mb-10 max-w-3xl text-center">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
+          Skills &amp; Capabilities
+        </p>
+        <h2 className="text-2xl font-bold text-white md:text-4xl">
+          A mix of <span className="text-[#16f2b3]">business, data and technology.</span>
+        </h2>
+        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
+          Skills developed through my MBA, project work and technical experience.
+          I use them to understand problems, define requirements and support data-informed solutions.
+        </p>
       </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Skills
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-        </div>
-      </div>
-
-      <div className="w-full my-12">
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          {skillsData.map((skill, id) => (
-            <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
-              key={id}>
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
-                <div className="flex -translate-y-[1px] justify-center">
-                  <div className="w-3/4">
-                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
-                  </div>
-                </div>
-                <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
-                    <Image
-                      src={skillsImage(skill)?.src}
-                      alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
-                    />
-                  </div>
-                  <p className="text-white text-sm sm:text-lg">
-                    {skill}
-                  </p>
-                </div>
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        {skillGroups.map((group, index) => (
+          <article
+            key={group.title}
+            className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#111a36] to-[#0b1026] p-5 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:border-[#16f2b3]/40 md:p-6"
+          >
+            <div className="mb-5 flex items-start gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#16f2b3]/30 bg-[#16f2b3]/10 text-sm font-bold text-[#16f2b3]">
+                0{index + 1}
+              </span>
+              <div>
+                <h3 className="text-base font-semibold text-white md:text-lg">
+                  {group.title}
+                </h3>
+                <p className="mt-1 text-xs leading-5 text-gray-400 md:text-sm">
+                  {group.subtitle}
+                </p>
               </div>
             </div>
-          ))}
-        </Marquee>
+
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-gray-200 transition-colors duration-200 hover:border-violet-400/60 hover:text-white"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default Skills;
