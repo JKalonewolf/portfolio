@@ -1,85 +1,78 @@
-// @flow strict
-
 import { experiences } from "@/utils/data/experience";
-import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import experience from '../../../assets/lottie/code.json';
-import AnimationLottie from "../../helper/animation-lottie";
-import GlowCard from "../../helper/glow-card";
 
 function Experience() {
   return (
-    <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <Image
-        src="/section.svg"
-        alt="Hero"
-        width={1572}
-        height={795}
-        className="absolute top-0 -z-10"
-      />
-
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-        </div>
+    <section
+      id="experience"
+      className="relative my-16 scroll-mt-24 border-t border-[#25213b] py-12 lg:my-24 lg:py-16"
+    >
+      <div className="mx-auto mb-10 max-w-3xl text-center">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#16f2b3]">
+          Professional Experience
+        </p>
+        <h2 className="text-2xl font-bold text-white md:text-4xl">
+          Where I&apos;ve <span className="text-[#16f2b3]">worked and contributed.</span>
+        </h2>
+        <p className="mt-4 text-sm leading-7 text-gray-400 md:text-base">
+          My professional internship experience, separate from academic and portfolio projects.
+        </p>
       </div>
 
-      <div className="py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
-            <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
-            </div>
-          </div>
+      <div className="mx-auto max-w-4xl space-y-5">
+        {experiences.map((experience) => (
+          <article
+            key={experience.id}
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#111a36] to-[#0b1026] p-5 shadow-xl shadow-black/10 md:p-8"
+          >
+            <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-violet-500/10 blur-3xl" />
 
-          <div>
-            <div className="flex flex-col gap-6">
-              {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
-                    <div className="p-3 relative">
-                      <Image
-                        src="/blur-23.svg"
-                        alt="Hero"
-                        width={1080}
-                        height={200}
-                        className="absolute bottom-0 opacity-80"
-                      />
-                      <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
-                          {experience.duration}
-                        </p>
-                      </div>
-                      <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                          <BsPersonWorkspace size={36} />
-                        </div>
-                        <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                            {experience.title}
-                          </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
-                          </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.details}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </GlowCard>
-                ))
-              }
+            <div className="relative flex flex-col gap-5 md:flex-row md:gap-7">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-[#16f2b3]/25 bg-[#16f2b3]/10 text-[#16f2b3]">
+                <BsPersonWorkspace size={28} />
+              </div>
+
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white md:text-xl">
+                      {experience.title}
+                    </h3>
+                    <p className="mt-1 text-sm font-medium text-[#16f2b3]">
+                      {experience.company}
+                    </p>
+                  </div>
+                  <span className="w-fit rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-gray-300">
+                    {experience.duration}
+                  </span>
+                </div>
+
+                <ul className="mt-5 space-y-3">
+                  {experience.details.map((detail) => (
+                    <li key={detail} className="flex gap-3 text-sm leading-7 text-gray-300">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#16f2b3]" />
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-2 border-t border-white/10 pt-5">
+                  {experience.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-gray-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default Experience;
