@@ -1,47 +1,66 @@
-// @flow strict
-import Link from "next/link";
+"use client";
 
+import { useState } from "react";
+import Link from "next/link";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
+
+const navigation = [
+  { label: "ABOUT", href: "/#about" },
+  { label: "EXPERIENCE", href: "/#experience" },
+  { label: "SKILLS", href: "/#skills" },
+  { label: "PROJECTS", href: "/#projects" },
+  { label: "EDUCATION", href: "/#education" },
+  { label: "CERTIFICATIONS", href: "/#certifications" },
+  { label: "CONTACT", href: "/#contact" },
+  { label: "BLOG", href: "/blog" },
+];
 
 function Navbar() {
-  return (
-    <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex flex-shrink-0 items-center">
-          <Link
-            href="/"
-            className=" text-[#16f2b3] text-3xl font-bold">
-            JAYAKUMAR
-          </Link>
-        </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-        <ul className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100" id="navbar-default">
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
-              <div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">ABOUT</div>
-            </Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EXPERIENCE</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">SKILLS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">EDUCATION</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#certifications"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">CERTIFICATIONS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">BLOGS</div></Link>
-          </li>
-          <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#projects"><div className="text-sm text-white transition-colors duration-300 hover:text-pink-600">PROJECTS</div></Link>
-          </li>
-        </ul>
+  return (
+    <nav className="sticky top-0 z-[100] border-b border-white/5 bg-[#0d1224]/90 backdrop-blur-xl">
+      <div className="relative mx-auto flex max-w-screen-xl items-center justify-between py-4">
+        <Link
+          href="/"
+          onClick={() => setIsOpen(false)}
+          className="text-xl font-extrabold tracking-wide text-[#16f2b3] transition-colors hover:text-white md:text-2xl"
+        >
+          JAYAKUMAR<span className="text-pink-500">.</span>
+        </Link>
+
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-gray-200 transition-colors hover:border-[#16f2b3]/40 hover:text-[#16f2b3] md:hidden"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isOpen}
+          aria-controls="portfolio-navigation"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          {isOpen ? <HiX size={23} /> : <HiMenuAlt3 size={23} />}
+        </button>
+
+        <div
+          id="portfolio-navigation"
+          className={`${isOpen ? "block" : "hidden"} absolute left-0 right-0 top-full mt-3 rounded-xl border border-white/10 bg-[#10172d] p-3 shadow-2xl shadow-black/30 md:static md:mt-0 md:block md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+        >
+          <ul className="flex flex-col gap-1 md:flex-row md:items-center md:gap-1">
+            {navigation.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-xs font-semibold tracking-wide text-gray-300 transition-colors hover:bg-white/5 hover:text-[#16f2b3] md:px-2 lg:px-3"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
