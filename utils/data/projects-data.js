@@ -20,25 +20,6 @@ export const projectsData = [
   },
   {
     id: 2,
-    name: "CrediFlow – Lending Business Analysis Case Study",
-    category: "Business Analysis",
-    status: "End-to-end BA portfolio case study",
-    role: "Business Analysis",
-    featured: true,
-    description:
-      "An end-to-end business analysis case study for a digital lending workflow, documenting business needs, stakeholder expectations, requirements, processes and lending data analysis.",
-    contributions: [
-      "Prepared the business case, stakeholder analysis and scope documentation.",
-      "Created BRD, FRD, user stories and a Requirements Traceability Matrix.",
-      "Mapped AS-IS and TO-BE processes and organised supporting BPMN artefacts.",
-      "Prepared lending datasets and SQL scripts for data cleaning, KPI, customer and risk analysis.",
-    ],
-    tools: ["Business Case", "BRD / FRD", "RTM", "BPMN", "User Stories", "SQL", "Power BI"],
-    code: "",
-    demo: "",
-  },
-  {
-    id: 3,
     name: "InsightX – AI-Powered Product Analytics Platform",
     category: "Product Analytics",
     status: "Product platform project",
@@ -56,7 +37,7 @@ export const projectsData = [
     demo: "",
   },
   {
-    id: 4,
+    id: 3,
     name: "FinGPT – AI Regulatory Compliance Assistant",
     category: "AI & LegalTech",
     status: "Implemented project",
@@ -74,7 +55,7 @@ export const projectsData = [
     demo: "",
   },
   {
-    id: 5,
+    id: 4,
     name: "GigWorker – Micro-Lending Platform",
     category: "FinTech Product",
     status: "Product concept and prototype",
@@ -92,7 +73,7 @@ export const projectsData = [
     demo: "",
   },
   {
-    id: 6,
+    id: 5,
     name: "Decentralized KYC Identity Platform",
     category: "Blockchain & FinTech",
     status: "Blockchain project",
@@ -110,7 +91,7 @@ export const projectsData = [
     demo: "",
   },
   {
-    id: 7,
+    id: 6,
     name: "Pizza Sales Performance Dashboard",
     category: "Data Analytics",
     status: "Power BI dashboard",
