@@ -53,7 +53,7 @@ function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[#16f2b3]/60 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#16f2b3]/10 md:text-sm"
             >
-              Download Resume
+              View Resume
               <MdDownload size={18} />
             </Link>
 
