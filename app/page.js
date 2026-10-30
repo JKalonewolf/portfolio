@@ -10,24 +10,38 @@ import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 
 async function getData() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
+  try {
+    const response = await fetch(
+      `https://dev.to/api/articles?username=${personalData.devUsername}`,
+      {
+        next: { revalidate: 3600 },
+        signal: AbortSignal.timeout(8000),
+      }
+    );
 
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
+    if (!response.ok) return [];
+
+    const data = await response.json();
+    if (!Array.isArray(data)) return [];
+
+    return data
+      .filter((item) => item?.cover_image)
+      .sort(
+        (a, b) =>
+          new Date(b.published_at || 0).getTime() -
+          new Date(a.published_at || 0).getTime()
+      );
+  } catch (error) {
+    console.error("Unable to load blog articles:", error.message);
+    return [];
   }
-
-  const data = await res.json();
-
-  const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
-
-  return filtered;
-};
+}
 
 export default async function Home() {
   const blogs = await getData();
 
   return (
-    <div suppressHydrationWarning >
+    <div>
       <HeroSection />
       <AboutSection />
       <Experience />
@@ -35,8 +49,8 @@ export default async function Home() {
       <Projects />
       <Education />
       <Certifications />
-      <Blog blogs={blogs} />
+      {blogs.length > 0 ? <Blog blogs={blogs} /> : null}
       <ContactSection />
     </div>
-  )
-};
+  );
+}
