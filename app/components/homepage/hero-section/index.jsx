@@ -1,173 +1,151 @@
-// @flow strict
-
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
+    <section className="relative flex flex-col justify-center py-8 lg:min-h-[calc(100vh-5rem)] lg:py-14">
       <Image
         src="/hero.svg"
-        alt="Hero"
+        alt=""
         width={1572}
         height={795}
-        className="absolute -top-[98px] -z-10"
+        priority
+        className="pointer-events-none absolute -top-[98px] -z-10 opacity-70"
       />
 
-      <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
-            Hello, <br />
-            This is {' '}
-            <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a Professional `}
-            <span className=" text-[#16f2b3]">{personalData.designation}</span>
-            .
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="flex flex-col items-start p-2">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#16f2b3] md:text-sm">
+            Business Analysis · Product Analytics · FinTech
+          </p>
+
+          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            Hi, I&apos;m{" "}
+            <span className="text-pink-500">{personalData.name}.</span>
           </h1>
 
-          <div className="my-12 flex items-center gap-5">
+          <h2 className="mt-5 text-xl font-semibold leading-snug text-[#16f2b3] md:text-2xl">
+            {personalData.designation}
+          </h2>
+
+          <p className="mt-6 max-w-xl text-sm leading-7 text-gray-300 md:text-base">
+            MBA graduate in IT &amp; FinTech with a BCA background. I turn
+            business problems into clear requirements, user journeys and
+            data-informed solutions, with project experience across FinTech,
+            AI and product analytics.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href="#projects"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-transform duration-200 hover:-translate-y-0.5 md:text-sm"
+            >
+              Explore Projects
+            </Link>
+
+            <Link
+              href={personalData.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[#16f2b3]/60 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#16f2b3]/10 md:text-sm"
+            >
+              Download Resume
+              <MdDownload size={18} />
+            </Link>
+
+            <Link
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-300 transition-colors duration-200 hover:text-[#16f2b3] md:text-sm"
+            >
+              Contact Me
+              <RiContactsFill size={16} />
+            </Link>
+          </div>
+
+          <div className="mt-8 flex items-center gap-5">
             <Link
               href={personalData.github}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open GitHub profile"
+              className="text-pink-500 transition-transform duration-300 hover:scale-125"
             >
-              <BsGithub size={30} />
+              <BsGithub size={26} />
             </Link>
             <Link
               href={personalData.linkedIn}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open LinkedIn profile"
+              className="text-pink-500 transition-transform duration-300 hover:scale-125"
             >
-              <BsLinkedin size={30} />
-            </Link>
-            
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
-              <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
-                <span>Contact me</span>
-                <RiContactsFill size={16} />
-              </button>
-            </Link>
-
-            <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href={personalData.resume}
-            >
-              <span>Get Resume</span>
-              <MdDownload size={16} />
+              <BsLinkedin size={26} />
             </Link>
           </div>
-
         </div>
-        <div className="order-1 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37]">
-          <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-            <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+
+        <div className="relative overflow-hidden rounded-xl border border-[#1b2c68a0] bg-gradient-to-br from-[#111a36] to-[#0a0d27] shadow-2xl shadow-violet-950/20">
+          <div className="flex items-center gap-2 border-b border-indigo-900/80 px-5 py-4">
+            <span className="h-3 w-3 rounded-full bg-red-400" />
+            <span className="h-3 w-3 rounded-full bg-orange-400" />
+            <span className="h-3 w-3 rounded-full bg-green-300" />
+            <span className="ml-3 text-xs text-gray-400">profile.js</span>
           </div>
-          <div className="px-4 lg:px-8 py-5">
-            <div className="flex flex-row space-x-2">
-              <div className="h-3 w-3 rounded-full bg-red-400"></div>
-              <div className="h-3 w-3 rounded-full bg-orange-400"></div>
-              <div className="h-3 w-3 rounded-full bg-green-200"></div>
-            </div>
-          </div>
-          <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-            <code className="font-mono text-xs md:text-sm lg:text-base">
-              <div className="blink">
-                <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-pink-500">=</span>
-                <span className="text-gray-400">{'{'}</span>
-              </div>
+
+          <div className="overflow-x-auto px-5 py-7 md:px-7">
+            <code className="block whitespace-nowrap font-mono text-xs leading-8 md:text-sm">
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-                <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Jayakumar</span>
-                <span className="text-gray-400">{`',`}</span>
+                <span className="text-pink-400">const</span>{" "}
+                <span className="text-white">profile</span>{" "}
+                <span className="text-pink-400">=</span>{" "}
+                <span className="text-gray-400">{"{"}</span>
               </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React,web3</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">User Research</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Blockchain</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Agile & Scrum</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">PyTorch</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MYSQL,SQL</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Prompt Engineering</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">jira</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AI / LLMs</span>
-                <span className="text-gray-400">{"',"}</span>
-                <span className="text-amber-300">Figma</span>
-                <span className="text-gray-400">{"',"}</span>
-                <span className="text-amber-300">Requirement Gathering</span>
-                <span className="text-gray-400">{"',"}</span>
-                <span className="text-amber-300">Stakeholder Management</span>
-                <span className="text-gray-400">{"',"}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
+              <div className="pl-5">
+                <span className="text-[#16f2b3]">role</span>
+                <span className="text-gray-400">: </span>
+                <span className="text-amber-300">&quot;Business &amp; Product Analysis&quot;</span>
                 <span className="text-gray-400">,</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+              <div className="pl-5">
+                <span className="text-[#16f2b3]">focus</span>
+                <span className="text-gray-400">: [</span>
+                <span className="text-amber-300">&quot;FinTech&quot;</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">&quot;AI&quot;</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">&quot;Data Analytics&quot;</span>
+                <span className="text-gray-400">],</span>
+              </div>
+              <div className="pl-5">
+                <span className="text-[#16f2b3]">toolkit</span>
+                <span className="text-gray-400">: [</span>
+                <span className="text-amber-300">&quot;SQL&quot;</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">&quot;Power BI&quot;</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">&quot;Python&quot;</span>
+                <span className="text-gray-400">, </span>
+                <span className="text-amber-300">&quot;Jira&quot;</span>
+                <span className="text-gray-400">],</span>
+              </div>
+              <div className="pl-5">
+                <span className="text-[#16f2b3]">approach</span>
+                <span className="text-gray-400">: </span>
+                <span className="text-amber-300">&quot;Understand → Define → Analyse → Improve&quot;</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
+                <span className="text-gray-400">{"};"}</span>
               </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
-              </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-gray-400">{`(`}</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-              <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
-              <div><span className="text-gray-400">{`};`}</span></div>
             </code>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default HeroSection;
