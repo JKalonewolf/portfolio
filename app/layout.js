@@ -11,9 +11,36 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jayakumar L | Business Analyst, Product Analyst & FinTech Portfolio",
+  metadataBase: new URL("https://jayakumarportfolio.netlify.app"),
+  title: {
+    default: "Jayakumar L | Business Analyst, Product Analyst & FinTech Portfolio",
+    template: "%s | Jayakumar L",
+  },
   description:
     "Portfolio of Jayakumar L, MBA graduate in IT & FinTech, showcasing business analysis, product analytics, FinTech, AI and data analytics projects.",
+  keywords: [
+    "Jayakumar L",
+    "Business Analyst",
+    "Product Analyst",
+    "FinTech",
+    "AI Product Management",
+    "SQL",
+    "Power BI",
+    "Business Analysis Portfolio",
+  ],
+  openGraph: {
+    title: "Jayakumar L | Business Analyst, Product Analyst & FinTech Portfolio",
+    description:
+      "Explore Jayakumar L's business analysis, product analytics, FinTech and AI projects.",
+    url: "https://jayakumarportfolio.netlify.app",
+    siteName: "Jayakumar L Portfolio",
+    locale: "en_IN",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
